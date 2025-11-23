@@ -46,6 +46,26 @@ When a group of users concurrently requests an *n*-th Fibonacci number (greater 
 
 ![](images/part3/part3-deploy-function-2.png)
 
+5:37:24 PM FunctionScalabilityLab2: Creating zip package...
+5:37:24 PM FunctionScalabilityLab2: Adding 17 files to zip package...
+5:37:24 PM FunctionScalabilityLab2: f:\escritorio\ARSW_LOAD-BALANCING_AZURE_II\FunctionProject\proxies.json
+5:37:24 PM FunctionScalabilityLab2: f:\escritorio\ARSW_LOAD-BALANCING_AZURE_II\FunctionProject\package.json
+5:37:24 PM FunctionScalabilityLab2: f:\escritorio\ARSW_LOAD-BALANCING_AZURE_II\FunctionProject\package-lock.json
+5:37:24 PM FunctionScalabilityLab2: f:\escritorio\ARSW_LOAD-BALANCING_AZURE_II\FunctionProject\host.json
+5:37:24 PM FunctionScalabilityLab2: f:\escritorio\ARSW_LOAD-BALANCING_AZURE_II\FunctionProject\node_modules\.package-lock.json
+5:37:24 PM FunctionScalabilityLab2: f:\escritorio\ARSW_LOAD-BALANCING_AZURE_II\FunctionProject\Fibonacci\sample.dat
+5:37:24 PM FunctionScalabilityLab2: f:\escritorio\ARSW_LOAD-BALANCING_AZURE_II\FunctionProject\Fibonacci\index.js
+5:37:24 PM FunctionScalabilityLab2: f:\escritorio\ARSW_LOAD-BALANCING_AZURE_II\FunctionProject\Fibonacci\function.json
+5:37:24 PM FunctionScalabilityLab2: f:\escritorio\ARSW_LOAD-BALANCING_AZURE_II\FunctionProject\.funcignore
+5:37:24 PM FunctionScalabilityLab2: f:\escritorio\ARSW_LOAD-BALANCING_AZURE_II\FunctionProject\node_modules\big-integer\tsconfig.json
+...
+5:37:34 PM FunctionScalabilityLab2: Deployment successful.
+5:37:35 PM FunctionScalabilityLab2: Started postDeployTask "npm install".
+5:37:46 PM FunctionScalabilityLab2: Syncing triggers...
+5:38:22 PM FunctionScalabilityLab2: HTTP Trigger Urls:
+Fibonacci: https://functionscalabilitylab2-cwgscyhtb9cvb3cf.canadacentral-01.azurewebsites.net/api/fibonacci
+
+
 4. Go to the Azure Portal and test the function.
 
 ![](images/part3/part3-test-function.png)
