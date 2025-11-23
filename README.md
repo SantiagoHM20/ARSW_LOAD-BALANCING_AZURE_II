@@ -85,6 +85,12 @@ When a group of users concurrently requests an *n*-th Fibonacci number (greater 
 
 ![](images/part3/part3-test-function.png)
 
+![](images/part3/azurePortal.png)
+
+
+![](images/part3/azurePortalOutput.png)
+
+
 5. Modify the POSTMAN collection using **NEWMAN** so that it can send **10 concurrent requests**. Verify the results and write a report.
 
 6. Create a new Function implementing Fibonacci using a **recursive solution with memoization**.  
