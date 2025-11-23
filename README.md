@@ -100,6 +100,52 @@ When a group of users concurrently requests an *n*-th Fibonacci number (greater 
 
 ---
 
+## Laboratory Results
+
+### Newman Concurrent Load Testing (10 Requests)
+
+**Results Summary:**
+- **Average Response Time:** 478.5 ms
+- **Min/Max:** 459 ms / 495 ms
+- **Success Rate:** 100% (10/10 requests)
+- All concurrent requests handled successfully with consistent performance
+
+| Run | Response Time (ms) |
+|-----|-------------------|
+| 1-10 | 459 - 495 |
+
+**Conclusion:** Azure Functions auto-scaling handled concurrent load efficiently with minimal variance.
+
+---
+
+### Recursive Fibonacci with Memoization Analysis
+
+**Implementation:** Recursive function with in-memory cache (`const memoCache = {}`)
+
+**Test Results:**
+
+#### Before 5-minute idle:
+- First call: 877 ms (cold start)
+- Subsequent calls: ~240 ms (cache active)
+- **Performance gain: 72% with cache**
+
+#### After 5-minute idle:
+- First call: 608 ms (cache cleared, partial cold start)
+- Subsequent calls: ~240 ms (cache rebuilt)
+
+**Key Findings:**
+1. **Cache is lost after inactivity** - Azure Functions deactivate idle instances, clearing all memory state
+2. **Cold starts reset performance** - Each reactivation requires cache rebuild
+3. **Memoization works within instance lifetime** - Significant performance improvement when cache is warm
+4. **Not suitable for distributed systems** - Cache is not shared across multiple instances
+
+**Recommendations:**
+- For persistent caching: Use Azure Redis Cache or Cosmos DB
+- For eliminating cold starts: Use Premium Plan with pre-warmed instances
+- For production: Implement external caching layer for distributed environments
+
+---
+
 # **Questions and Answers**
 
 ### **1. What is an Azure Function?**
